@@ -10,6 +10,13 @@ export function getTransformedValue(
   const brCharacter = `_br_${Date.now()}_`;
   const brMatcher = new RegExp(`\\n?${brCharacter}\\n?`, 'g');
 
+  console.log(
+    'get transformed value',
+    Array.from(inputElement.childNodes)
+      .map(el => getNodeContent(el, brCharacter))
+      .join('')
+  );
+
   return Array.from(inputElement.childNodes)
     .map(el => getNodeContent(el, brCharacter))
     .join('')
