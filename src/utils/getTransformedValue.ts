@@ -12,9 +12,9 @@ export function getTransformedValue(
 
   console.log(
     'get transformed value',
-    Array.from(inputElement.childNodes)
-      .map(el => getNodeContent(el, brCharacter))
-      .join('')
+    Array.from(inputElement.childNodes).map(el =>
+      getNodeContent(el, brCharacter)
+    )
   );
 
   return Array.from(inputElement.childNodes)
@@ -22,7 +22,7 @@ export function getTransformedValue(
     .join('')
     .replace(/\u00A0/g, ' ') // Replace back insecable spaces
     .replace(/\n{2,}/g, '\n') // Following lines are considered as one in HTML
-    .replace(brMatcher, '\n') // Replace <br/> to line break
+    .replace(brMatcher, '\n\n') // Replace <br/> to line break
     .trim();
 }
 
