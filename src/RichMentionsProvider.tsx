@@ -24,7 +24,7 @@ import { handleFragmentCreation } from './utils/handleFragmentCreation';
 import { handleFragmentDeletion } from './utils/handleFragmentDeletion';
 import { getConfigsInitialValue } from './utils/getConfigsInitialValue';
 import { transformFinalFragment } from './utils/transformFinalFragment';
-import { deleteSelection } from './utils/deleteSelection';
+// import { deleteSelection } from './utils/deleteSelection';
 
 interface TProps<T = object> {
   children: React.ReactNode | React.ReactNode[];
