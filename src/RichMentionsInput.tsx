@@ -26,6 +26,7 @@ export function RichMentionsInput({ defaultValue, ...divAttributes }: TProps) {
 
   const mergeOnKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     onKeyDown(event);
+    onInput(event);
 
     if (divAttributes.onKeyDown) {
       divAttributes.onKeyDown(event);
